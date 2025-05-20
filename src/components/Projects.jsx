@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import GitHubCalendar from "react-github-calendar";
+
 
 const projects = [
   {
@@ -101,6 +103,20 @@ export default function Projects() {
 
         ))}
       </div>
+
+      <div className="mt-20">
+        <h3 className="text-2xl font-bold text-crema mb-6 text-center">My GitHub Activity</h3>
+        <div className="flex justify-center overflow-x-auto">
+          <GitHubCalendar
+            username="dnxssj"
+            blockSize={15}
+            blockMargin={5}
+            color="#2ee9a4"
+            fontSize={14}
+          />
+        </div>
+      </div>
+
     </motion.section>
   );
 }
