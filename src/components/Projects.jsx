@@ -42,7 +42,7 @@ const projects = [
   },
   {
     title: "Toplist RubyServer [Sherwood Dungeon]",
-    description: "Community site for a fictional ninja clan with ranking, user system and game integration.",
+    description: "Community site for a game pvp ranking, user system and profile integration.",
     technologies: ["Express", "MongoDB", "Node.js"],
     github: "https://github.com/dnxssj/ruby-server",
     demo: "https://www.rubyserver.org/",
