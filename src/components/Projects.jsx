@@ -15,7 +15,7 @@ const projects = [
     description: "Personal developer portfolio with smooth scroll, animations, and responsive layout.",
     technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/dnxssj/portfolio",
-    demo: "#",
+    demo: "dnx-portfolio-react.vercel.app",
     image: "/images/image4.png"
   },
   {
