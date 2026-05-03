@@ -14,7 +14,7 @@ export default function Contact() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("https://formspree.io/f/mkoyjwrz", {
+      const res = await fetch("https://formspree.io/f/xwvylkzk", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -65,7 +65,7 @@ export default function Contact() {
         <motion.a
           whileHover={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          href="mailto:dnxssj@gmail.com"
+          href="mailto:contact@dnxlab.de"
           className="text-turquesa"
           target="_blank"
         >
