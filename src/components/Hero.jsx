@@ -26,7 +26,7 @@ export default function Hero() {
         initial={false}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       >
-        Fullstack Developer
+        IT-Service, Smart Home & individuelle Softwarelösungen
       </motion.h2>
 
       <motion.p
@@ -34,7 +34,7 @@ export default function Hero() {
         initial={false}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       >
-        I build clean, fast and scalable web applications with a strong focus on design and usability.
+        Ich analysiere, repariere und optimiere deine Systeme – schnell, effizient und ohne unnötigen Aufwand.
       </motion.p>
 
       <motion.a
@@ -44,7 +44,7 @@ export default function Hero() {
         initial={false}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       >
-        Contact me
+        Kontakt aufnehmen
       </motion.a>
 
       <motion.div
