@@ -52,7 +52,7 @@ export default function Contact() {
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-4xl sm:text-5xl font-extrabold text-crema mb-8">
-        Contact
+        Kontakt
       </h2>
 
       <p className="text-lg text-crema text-opacity-90 mb-8">

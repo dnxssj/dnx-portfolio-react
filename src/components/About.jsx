@@ -3,104 +3,90 @@ import { motion, useInView } from "framer-motion";
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <motion.section
+    <section
       id="about"
       ref={ref}
-      className="min-h-screen max-w-6xl mx-auto px-12 py-40 relative"
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.8 }}
+      className="max-w-6xl mx-auto px-4 sm:px-6 py-24"
     >
-      {/* GRID */}
-      <div className="grid md:grid-cols-2 gap-20 items-center relative">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7 }}
+      >
 
-        {/* 🔥 LÍNEA VERTICAL */}
-        <div className="hidden md:block absolute left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-turquesa/30 to-transparent"></div>
+        {/* TITLE */}
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-crema mb-12 text-center">
+          Über mich
+        </h2>
 
-        {/* IZQUIERDA */}
-        <div className="pr-6">
-          <h2 className="text-5xl font-extrabold text-crema mb-12">
-            About Me
-          </h2>
+        {/* GRID */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          <p className="text-lg text-crema/90 leading-relaxed">
-            Ich bin ein{" "}
-            <span className="text-turquesa font-semibold">
-              Fullstack-Entwickler und IT-Dienstleister
-            </span>
-            , spezialisiert auf die Entwicklung moderner und zuverlässiger
-            technischer Lösungen.
-          </p>
+          {/* TEXTO */}
+          <div>
+            <h3 className="text-2xl text-turquesa mb-4 font-semibold">
+              Technik, die einfach funktioniert.
+            </h3>
 
-          <p className="mt-6 text-crema/80 leading-relaxed">
-            Ich unterstütze sowohl Privatpersonen als auch Unternehmen bei der
-            Analyse, Optimierung und Umsetzung von IT-Systemen – von der
-            klassischen Wartung bis hin zu individuellen Webanwendungen und
-            Smart-Home-Integrationen.
-          </p>
+            <p className="text-crema/80 mb-6 leading-relaxed">
+              Ich helfe Privatkunden und kleinen Unternehmen dabei, ihre Systeme zu optimieren, Probleme schnell zu lösen und digitale Lösungen effizient umzusetzen.
+            </p>
 
-          <p className="mt-6 text-crema/80 leading-relaxed">
-            Mein Fokus liegt auf klar strukturierten, nachhaltigen Lösungen mit
-            echtem Mehrwert.
-          </p>
+            <p className="text-crema/70 mb-6 leading-relaxed">
+              Kein unnötiger Overhead, keine komplizierten Prozesse – sondern direkte, saubere Lösungen, die wirklich funktionieren.
+            </p>
+
+            {/* TRUST POINTS */}
+            <div className="space-y-2 text-crema/70">
+              <p>✔ Schnelle Problemlösung</p>
+              <p>✔ Persönlicher Support</p>
+              <p>✔ Klare Kommunikation</p>
+              <p>✔ Fokus auf Effizienz</p>
+            </div>
+          </div>
+
+<div className="relative flex justify-center">
+
+  {/* GLOW BACK */}
+  <div className="absolute w-72 h-72 bg-turquesa/20 blur-[100px] rounded-full" />
+
+  {/* CONTENEDOR */}
+  <div className="relative px-6 py-4">
+
+    {/* LINEA IZQUIERDA */}
+    <div className="absolute left-0 top-0 h-full w-[2px] 
+      bg-gradient-to-b from-transparent via-turquesa to-transparent 
+      opacity-70" />
+
+    {/* LINEA DERECHA */}
+    <div className="absolute right-0 top-0 h-full w-[2px] 
+      bg-gradient-to-b from-transparent via-turquesa to-transparent 
+      opacity-70" />
+
+    {/* IMAGEN */}
+    <img
+      src="/images/Bild.png"
+      alt="Daniel Rodríguez"
+      className="w-56 h-64 sm:w-64 sm:h-72 
+      object-contain 
+      rounded-md 
+      relative z-10"
+    />
+
+  </div>
+
+  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 
+  text-xs bg-black/70 text-turquesa px-3 py-1 rounded-full backdrop-blur">
+  Founder
+</div>
+</div>
+
         </div>
 
-        {/* DERECHA */}
-        <div className="flex flex-col gap-8 pl-6">
-
-          {/* CARD */}
-          <motion.div
-            className="p-6 rounded-xl bg-black/50 border border-turquesa/20 backdrop-blur-sm transition-all duration-300 cursor-pointer"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(46,233,164,0.25)"
-            }}
-          >
-            <h3 className="text-lg font-semibold text-crema mb-2">
-              IT-Service
-            </h3>
-            <p className="text-crema/80 text-sm">
-              Diagnose, Reparatur und Optimierung von PCs und Systemen.
-            </p>
-          </motion.div>
-
-          {/* CARD */}
-          <motion.div
-            className="p-6 rounded-xl bg-black/50 border border-turquesa/20 backdrop-blur-sm transition-all duration-300 cursor-pointer"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(46,233,164,0.25)"
-            }}
-          >
-            <h3 className="text-lg font-semibold text-crema mb-2">
-              Softwareentwicklung
-            </h3>
-            <p className="text-crema/80 text-sm">
-              Individuelle Webanwendungen und Automatisierung von Prozessen.
-            </p>
-          </motion.div>
-
-          {/* CARD */}
-          <motion.div
-            className="p-6 rounded-xl bg-black/50 border border-turquesa/20 backdrop-blur-sm transition-all duration-300 cursor-pointer"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(46,233,164,0.25)"
-            }}
-          >
-            <h3 className="text-lg font-semibold text-crema mb-2">
-              Smart Home
-            </h3>
-            <p className="text-crema/80 text-sm">
-              Planung und Integration intelligenter Systeme für Zuhause.
-            </p>
-          </motion.div>
-
-        </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }

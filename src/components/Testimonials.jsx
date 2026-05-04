@@ -89,7 +89,7 @@ export default function Testimonials() {
     >
       {/* TITLE */}
       <h2 className="text-4xl sm:text-5xl font-extrabold text-crema text-center mb-12">
-        Testimonials
+        Kundenbewertungen
       </h2>
 
       {/* BADGE */}

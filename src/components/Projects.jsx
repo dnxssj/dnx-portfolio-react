@@ -66,7 +66,7 @@ export default function Projects() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-crema mb-16">Projects</h2>
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-crema mb-16">Projekte</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((proj, index) => (
           <motion.div
