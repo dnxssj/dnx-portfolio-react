@@ -22,7 +22,7 @@ const services = [
 
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   return (
     <motion.section

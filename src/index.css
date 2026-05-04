@@ -5,5 +5,7 @@
 body {
   @apply bg-fondo text-crema;
   font-family: system-ui, "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+
+  
 }
 

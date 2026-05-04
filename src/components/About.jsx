@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   return (
     <section
@@ -48,7 +48,7 @@ export default function About() {
             </div>
           </div>
 
-<div className="relative flex justify-center">
+<div className="relative flex justify-end">
 
   {/* GLOW BACK */}
   <div className="absolute w-72 h-72 bg-turquesa/20 blur-[100px] rounded-full" />
@@ -76,12 +76,14 @@ export default function About() {
       relative z-10"
     />
 
-  </div>
-
-  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 
-  text-xs bg-black/70 text-turquesa px-3 py-1 rounded-full backdrop-blur">
+    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2
+  text-xs bg-black/80 text-turquesa px-3 py-1 rounded-full backdrop-blur">
   Founder
 </div>
+
+  </div>
+
+    
 </div>
 
         </div>
