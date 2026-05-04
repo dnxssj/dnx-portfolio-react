@@ -80,7 +80,7 @@ export default function Projects() {
       className="min-h-screen max-w-6xl mx-auto px-4 pt-16 pb-32 text-center scroll-mt-24"
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
       <h2 className="text-4xl sm:text-5xl font-extrabold text-crema mb-16">Projekte</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

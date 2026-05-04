@@ -30,8 +30,8 @@ export default function Services() {
       id="services"
       className="max-w-6xl mx-auto px-4 py-24"
       initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}    
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
       {/* TITLE */}
       <div className="text-center mb-16">

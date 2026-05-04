@@ -13,8 +13,8 @@ export default function About() {
     >
       <motion.div
         initial={{ opacity: 0, y: 60 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
 
         {/* TITLE */}
