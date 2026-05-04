@@ -5,6 +5,22 @@ import GitHubCalendar from "react-github-calendar";
 
 const projects = [
   {
+    title: "Bee Management System",
+    description: "Fullstack application for managing beekeeping operations, featuring secure authentication, PostgreSQL data handling and QR-based hive tracking.",
+    technologies: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+      "QR Code"
+    ],
+    github: "#",
+    demo: "#",
+    image: "/images/beeweb.png"
+  },
+  {
     title: "Task Manager App",
     description: "A full-featured to-do app with user authentication, deadlines, reminders, and calendar integration.",
     technologies: ["PHP", "MySQL", "JavaScript", "Google Calendar API"],
@@ -87,18 +103,48 @@ export default function Projects() {
 
             {/* Capa oscura + contenido */}
             <div className="relative z-10 p-6 backdrop-blur-md bg-black/30 rounded-xl text-left">
-              <h3 className="text-xl font-semibold text-crema mb-2">{proj.title}</h3>
-              <p className="text-crema/80 mb-3">{proj.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {proj.technologies.map((tech, i) => (
-                  <span key={i} className="text-xs bg-turquesa text-fondo px-2 py-1 rounded-full">{tech}</span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <a href={proj.github} target="_blank" className="text-turquesa hover:underline">GitHub</a>
-                <a href={proj.demo} target="_blank" className="text-turquesa hover:underline">Demo</a>
-              </div>
-            </div>
+
+  {/* TITLE + BADGE */}
+  <div className="flex items-center gap-2 mb-2">
+    <h3 className="text-xl font-semibold text-crema">
+      {proj.title}
+    </h3>
+
+    {proj.title === "Bee Management System" && (
+      <span className="text-[10px] text-turquesa bg-turquesa/10 px-1 py-[1px] rounded-full">
+        In Progress
+      </span>
+    )}
+  </div>
+
+  {/* DESCRIPTION */}
+  <p className="text-crema/80 mb-3">
+    {proj.description}
+  </p>
+
+  {/* TECH */}
+  <div className="flex flex-wrap gap-2 mb-4">
+    {proj.technologies.map((tech, i) => (
+      <span
+        key={i}
+        className="text-xs bg-turquesa text-fondo px-2 py-1 rounded-full"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+
+  {/* LINKS */}
+  <div className="flex gap-4">
+    <a href={proj.github} target="_blank" className="text-turquesa hover:underline">
+      GitHub
+    </a>
+    <a href={proj.demo} target="_blank" className="text-turquesa hover:underline">
+      Demo
+    </a>
+  </div>
+
+</div>
           </motion.div>
 
         ))}
