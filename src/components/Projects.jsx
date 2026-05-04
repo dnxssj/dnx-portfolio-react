@@ -97,7 +97,7 @@ export default function Projects() {
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm group-hover:scale-110 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm group-hover:scale-110 group-hover:brightness-110transition-transform duration-700"
               />
             )}
 
@@ -137,10 +137,10 @@ export default function Projects() {
   {/* LINKS */}
   <div className="flex gap-4">
     <a href={proj.github} target="_blank" className="text-turquesa hover:underline">
-      GitHub
+      Source Code
     </a>
     <a href={proj.demo} target="_blank" className="text-turquesa hover:underline">
-      Demo
+      Live Demo
     </a>
   </div>
 
@@ -151,7 +151,7 @@ export default function Projects() {
       </div>
 
       <div className="mt-20">
-        <h3 className="text-2xl font-bold text-crema mb-6 text-center">My GitHub Activity</h3>
+        <h3 className="text-2xl font-bold text-crema mb-6 text-center">Development Activity</h3>
         <div className="flex justify-center overflow-x-auto">
           <GitHubCalendar
             username="dnxssj"
