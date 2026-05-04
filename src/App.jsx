@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,7 +10,10 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-export default function App() {
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+
+function Home() {
   return (
     <>
       <Navbar />
@@ -20,5 +25,17 @@ export default function App() {
       <Contact />
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

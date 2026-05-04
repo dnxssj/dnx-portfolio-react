@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -58,9 +59,13 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         
         {/* LOGO */}
-        <h1 className="text-xl sm:text-2xl font-bold text-crema tracking-wide">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="text-xl sm:text-2xl font-bold text-crema tracking-wide hover:opacity-80 transition"
+        >
           DNX Lab
-        </h1>
+        </Link>
 
         {/* DESKTOP */}
         <ul className="hidden md:flex gap-8 text-turquesa font-medium relative">
