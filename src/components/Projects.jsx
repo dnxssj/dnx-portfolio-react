@@ -27,6 +27,21 @@ const projects = [
     image: "/images/beeweb.png"
   },
   {
+    title: "Vacation Rental Web Platform (FeWo Demo)",
+    description: "Modern vacation rental web platform (FeWo) with booking flow, admin dashboard and fully responsive UI, designed as a scalable frontend prototype.",
+    highlights: [
+      "Booking flow with availability check ",
+      "Admin dashboard with reservations and user management ",
+      "Interactive calendar for booking overview ",
+      "Modular component-based architecture",
+      " Fully responsive and production-ready UI "
+    ],
+    technologies: ["Next.js", "Tailwind CSS", "React", "Mock Data"],
+    github: "#",
+    demo: "#",
+    image: "/images/image10.png"
+  },
+  {
     title: "Task Manager App",
     description: "Manage tasks with deadlines, reminders and calendar sync.",
     highlights: [
