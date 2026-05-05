@@ -8,7 +8,7 @@ const testimonials = [
     country: "Deutschland",
     flag: "https://flagcdn.com/w40/de.png",
     text: "Schnelle und professionelle Hilfe. Mein PC läuft wieder perfekt.",
-    rating: 5,
+    rating: 4,
   },
   {
     name: "Laura Schmidt",
@@ -19,12 +19,12 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Daniel Weber",
-    role: "Unternehmen",
-    country: "Deutschland",
-    flag: "https://flagcdn.com/w40/de.png",
+    name: "Daniel Lirola Medina",
+    role: "Privatkunde",
+    country: "Spanien",
+    flag: "https://flagcdn.com/w40/es.png",
     text: "Zuverlässig, effizient und technisch auf hohem Niveau.",
-    rating: 4,
+    rating: 5,
   },
   {
     name: "Roberto Rodríguez",

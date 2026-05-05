@@ -44,7 +44,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="#" // 👉 pon aquí tu LinkedIn
+                href="https://linkedin.com/in/dienix" // 
             target="_blank"
             className="text-crema/60 opacity-70 hover:opacity-100 hover:text-turquesa transition"
           >
