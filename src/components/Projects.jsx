@@ -8,8 +8,10 @@ const projects = [
     description: "Fullstack application for managing beekeeping operations.",
     highlights: [
       "QR-based hive tracking",
-      "Secure authentication",
-      "Centralized data management"
+      "Secure authentication system",
+      "Centralized data management",
+      "Scalable backend architecture",
+
     ],
     technologies: [
       "React",
@@ -28,9 +30,11 @@ const projects = [
     title: "Task Manager App",
     description: "Manage tasks with deadlines, reminders and calendar sync.",
     highlights: [
-      "Never miss deadlines",
-      "Calendar integration",
-      "Clear task overview"
+      "Deadline & reminder system",
+      "Google Calendar synchronization ",
+      "User authentication & session handling ",
+      "Task status tracking (complete/restore) ",
+      "Role-based task visibility"
     ],
     technologies: ["PHP", "MySQL", "JavaScript", "Google Calendar API"],
     github: "https://github.com/dnxssj/todo-app",
@@ -50,36 +54,56 @@ const projects = [
     demo: "dnx-portfolio-react.vercel.app",
     image: "/images/image4.png"
   },
-  {
-    title: "Anime List App",
-    description: "Search and track anime using the Jikan API.",
-    technologies: ["React", "Axios", "Jikan API"],
-    github: "https://github.com/dnxssj/anime-app",
-    demo: "#"
-  },
-  {
-    title: "Server Discord Bot",
-    description: "Custom Discord bot with roles, music and moderation.",
-    technologies: ["Node.js", "Discord.js", "Glitch"],
-    github: "https://github.com/dnxssj/discord-bot",
-    demo: "#"
+    {
+    title: "Community Management Discord Bot",
+    description: "Advanced Discord bot with role automation, leveling system, moderation tools and dynamic user profiles.",
+    highlights: [ 
+      "Role Automation System",
+      "XP & Leveling System",
+      "Custom Rank Roles",
+      "Moderation Commands",
+      "User Profile Card (Canvas)",
+      "Persistent Data Storage",
+      "Scalable Command Structure",
+      "Economy System (in progress)"
+
+    ],
+    technologies: ["Node.js", "Discord.js", "Canvas API", "JSON Storage"],
+    github: "https://github.com/dnxssj/autorole-discord",
+    demo: "#",
+    image: "/images/image7.png"
   },
   {
     title: "Portfolio for Illustrator",
-    description: "Minimal link hub for a digital illustrator.",
+    description: "Minimal one-page link hub for a digital illustrator, focused on accessibility, mobile-first design and clean presentation of social and portfolio links.",
     technologies: ["HTML", "Tailwind CSS", "Vite"],
+    highlights: [
+      "Mobile-first responsive layout",
+      "Clean link hub for social platforms",  
+      "Fast loading and lightweight structure",  
+      "Customizable sections for portfolio links",  
+      "Optimized for personal branding"
+    ],
     github: "https://github.com/dnxssj/portfolio-illustrator",
     demo: "https://portfolio-illustrator-lerka.vercel.app/",
     image: "/images/image3.png"
   },
   {
     title: "Toplist RubyServer",
-    description: "Community ranking system with user profiles.",
+    description: "Community platform for a game ranking system with user accounts, profile management and real-time leaderboard functionality.",
     technologies: ["Express", "MongoDB", "Node.js"],
+    highlights: [
+      "User authentication and account system",
+      "Dynamic leaderboard and ranking logic ",
+      "Profile management and user data handling",
+      "Backend API with Express",
+      "MongoDB data persistence"
+    ],
     github: "https://github.com/dnxssj/ruby-server",
     demo: "https://www.rubyserver.org/",
     image: "/images/image1.png"
-  }
+  },
+  
 ];
 
 export default function Projects() {
@@ -121,7 +145,7 @@ export default function Projects() {
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300" />
 
             {/* CONTENT */}
-            <div className="relative z-10 p-6 backdrop-blur-md bg-black/30 rounded-xl text-left">
+            <div className="relative z-10 p-6 backdrop-blur-md bg-black/30 rounded-xl text-left flex flex-col h-full">
 
               {/* TITLE + BADGE */}
               <div className="flex items-center gap-2 mb-2">
@@ -144,7 +168,7 @@ export default function Projects() {
               {/* HIGHLIGHTS */}
               {proj.highlights && (
                 <ul className="text-xs text-crema/70 mb-3 space-y-1">
-                  {proj.highlights.map((h, i) => (
+                  {proj.highlights.slice(0, 3).map((h, i) => (
                     <li key={i} className="flex items-center gap-2">
                       <span className="text-turquesa">✔</span>
                       {h}
@@ -166,7 +190,7 @@ export default function Projects() {
               </div>
 
               {/* LINKS */}
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-auto pt-4">
                 <a
                   href={proj.github}
                   target="_blank"

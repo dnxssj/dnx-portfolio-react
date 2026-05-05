@@ -6,6 +6,21 @@ body {
   @apply bg-fondo text-crema;
   font-family: system-ui, "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
 
-  
+ @keyframes scrollDot {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
 }
 
